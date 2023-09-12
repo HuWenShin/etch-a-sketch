@@ -1,0 +1,7 @@
+div .controls{
+    display: flex;
+}
+
+div .controls .color{
+    display: flex;
+}
