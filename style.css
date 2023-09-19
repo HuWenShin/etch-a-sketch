@@ -13,6 +13,8 @@ div .controls .color {
 
 #container {
     display: grid;
+    height: 500px;
+    width: 500px;
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
 }

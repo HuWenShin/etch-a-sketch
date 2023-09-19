@@ -21,7 +21,8 @@ makeGrids(slider.value, slider.value);
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
     output.innerText = this.value + "x" + this.value;
-    //let element = document.getElementsByClassName("grid-item");
-    //if (element) {container.parentNode.removeChild(container);};
+    if (container.hasChildNodes()) {
+        while (container.firstChild) {container.removeChild(container.firstChild);}
+    };
     makeGrids(this.value, this.value);
   }
