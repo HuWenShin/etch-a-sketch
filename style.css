@@ -1,7 +1,22 @@
-div .controls{
+:root {
+    --grid-rows: 1;
+    --grid-cols: 1;
+}
+
+div .controls {
     display: flex;
 }
 
-div .controls .color{
+div .controls .color {
     display: flex;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+}
+
+.grid-item {
+    border: 1px solid #ddd;
 }
