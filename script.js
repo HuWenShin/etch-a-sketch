@@ -1,6 +1,6 @@
 //show slider value
-var slider = document.getElementById("pixel");
-var output = document.getElementById("gridVal");
+const slider = document.getElementById("pixel");
+const output = document.getElementById("gridVal");
 output.innerText = slider.value + "x" + slider.value; // Display the default slider value
 
 //create grid
@@ -19,7 +19,7 @@ function makeGrids(rows, cols) {
 
 makeGrids(slider.value, slider.value);
 
-// Update the current slider value (each time you drag the slider handle)
+// Update the current slider value and grid size (each time you drag the slider handle)
 slider.oninput = function() {
     output.innerText = this.value + "x" + this.value;
     if (container.hasChildNodes()) {
@@ -33,10 +33,17 @@ var mouseDown = false;
 document.body.onmousedown = function() {mouseDown = true;};
 document.body.onmouseup = function() {mouseDown = false;};
 
+const colorPicker = document.getElementById("clrpckr");
+
 function color(event) {
     if (mouseDown) {
-        event.target.style.backgroundColor = "green";
+        event.target.style.backgroundColor = colorPicker.value;
     }
 }
 
-//erase button
+//clear button
+const clearBtn = document.getElementById("clrbtn");
+clearBtn.addEventListener("click", () => {
+    while (container.firstChild) {container.removeChild(container.firstChild);};
+    makeGrids(slider.value, slider.value);
+  });
