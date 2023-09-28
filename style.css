@@ -3,22 +3,35 @@
     --grid-cols: 1;
 }
 
-div .controls {
-    display: flex;
-}
-
-div .controls .color {
-    display: flex;
+.frame {
+    text-align: center;
+    background-color: #ff4063;
+    margin: 20px 40px;
+    padding: 20px 0;
 }
 
 #container {
     display: grid;
-    height: 500px;
-    width: 500px;
+    height: 560px;
+    width: 560px;
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
+    margin: auto;
 }
 
 .grid-item {
     border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+div .controls {
+    display: flex;
+    text-align: center;
+    margin: auto;
+    width: 560px;
+}
+
+div .controls > div {
+    text-align: center;
+    margin: 20px auto;
 }
