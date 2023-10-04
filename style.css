@@ -3,11 +3,22 @@
     --grid-cols: 1;
 }
 
+body {
+    background-color: #ddd;
+}
+
 .frame {
     text-align: center;
     background-color: #ff4063;
-    margin: 20px 40px;
+    margin: 30px auto;
     padding: 20px 0;
+    width: 700px;
+    border-radius: 5%;
+}
+
+h1 {
+    color: #fffcde;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #container {
@@ -29,9 +40,20 @@ div .controls {
     text-align: center;
     margin: auto;
     width: 560px;
+    align-items: center;
 }
 
 div .controls > div {
     text-align: center;
     margin: 20px auto;
+}
+
+#slider, .color, #clrbtn {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#clrbtn {
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 50%;
 }
